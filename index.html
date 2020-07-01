@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link type="text/css" rel="stylesheet" href="public/css/custom.css" media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="public/css/materialize.min.css" media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" media="screen,projection" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>
+            /* html {
+                scroll-behavior: smooth;
+            } */
+
+            .sidenav-toggler {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 999;
+            }
+            .social-link a {
+                font-size: 18px;
+                line-height: 1;
+                padding: 8px 0;
+                margin-right: 4px;
+                border-radius: 50%;
+                text-align: center;
+                width: 36px;
+                height: 36px;
+            }
+
+            .sidenav li > a > i {
+                margin: 0 28px 0 0;
+                font-size: 24px;
+            }
+
+            .sidenav li > a,
+            .sidenav li > a > i {
+                color: #757575 !important;
+            }
+
+            .sidenav li > a.active,
+            .sidenav li > a.active > i {
+                color: #fff !important;
+            }
+
+            /*  */
+        </style>
+
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <div class="" style="padding: 50px;">
+                <!-- Page Content goes here -->
+
+                <ul id="slide-out" class="sidenav sidenav-fixed grey darken-4">
+                    <li class="pb-2">
+                        <div class="user-view center-align">
+                            <img class="circle" src="public/img/img_avatar3.png" style="margin: 0 auto; width: 7.5rem; height: auto; border: 0.375rem solid #424242;" />
+                            <span class="white-text name" style="font-size: 1.5rem;">Patrick Caringal</span>
+                        </div>
+                    </li>
+                    <li class="pb-4">
+                        <div class="social-link center-align">
+                            <a class="waves-effect blue-grey darken-3 white-text" href="#!"><i class="fab fa-facebook-f white-text"></i></a>
+                            <a class="waves-effect blue-grey darken-3 white-text" href="#!"><i class="fab fa-instagram white-text"></i></a>
+                            <a class="waves-effect blue-grey darken-3 white-text" href="#!"><i class="fab fa-linkedin-in white-text"></i></a>
+                            <a class="waves-effect blue-grey darken-3 white-text" href="#!"><i class="fab fa-github white-text"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="sidenav-close waves-effect white-text" href="#about"><i class="fas fa-user-tie white-text"></i> About </a>
+                    </li>
+                    <li>
+                        <a class="sidenav-close waves-effect" href="#skills"><i class="fas fa-stream"></i> Skills</a>
+                    </li>
+                    <li>
+                        <a class="sidenav-close waves-effect grey-text text-darken-1" href="#portfolio"><i class="fas fa-briefcase grey-text text-darken-1"></i> Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="sidenav-close waves-effect grey-text text-darken-1" href="#achievements"><i class="fas fa-trophy grey-text text-darken-1"></i> Achievements</a>
+                    </li>
+                </ul>
+
+                <a id="sidenav-opener" href="#" data-target="slide-out" class="btn-floating btn-large waves-effect waves-light blue darken-1 sidenav-trigger hide-on-large-only scale-transition sidenav-toggler"><i class="material-icons">menu</i></a>
+                <a id="sidenav-closer" href="#" data-target="slide-out" class="btn-floating btn-large waves-effect waves-light blue darken-1 sidenav-close hide-on-large-only scale-transition scale-out sidenav-toggler"><i class="material-icons">close</i></a>
+
+                <div class="row">
+                    <div class="col s12 m9 l10">
+                        <div id="about" class="section scrollspy" style="height: 1000px;">
+                            <h3>About</h3>
+                            <img src="public/img/materialize-logo.png" style="height: 100px;" />
+                        </div>
+
+                        <div id="skills" class="section scrollspy" style="height: 1000px;">
+                            <h3>Skills</h3>
+                        </div>
+
+                        <div id="portfolio" class="section scrollspy" style="height: 1000px;">
+                            <h3>portfolio</h3>
+                        </div>
+
+                        <div id="achievements" class="section scrollspy" style="height: 1000px;">
+                            <h3>achievements</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="public/js/jquery.min.js"></script>
+        <script type="text/javascript" src="public/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.sidenav').sidenav({
+                    onOpenStart: () => {
+                        $('#sidenav-opener').addClass('scale-out');
+                    },
+                    onOpenEnd: () => {
+                        $('#sidenav-closer').removeClass('scale-out');
+                    },
+                    onCloseStart: () => {
+                        $('#sidenav-closer').addClass('scale-out');
+                    },
+                    onCloseEnd: () => {
+                        $('#sidenav-opener').removeClass('scale-out');
+                    }
+                });
+
+                $('.sidenav').sidenav('open');
+
+                $('#sidenav-closer').on('click', function () {
+                    $('.sidenav').sidenav('close');
+                });
+
+                $('.scrollspy').scrollSpy({
+                    scrollOffset: 0
+                });
+
+                // window.onscroll = function () {
+                //     console.log('scrolling');
+                // };
+            });
+        </script>
+    </body>
+</html>
