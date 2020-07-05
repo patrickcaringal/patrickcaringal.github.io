@@ -12,137 +12,6 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
-        <style>
-            main {
-                font-family: 'Montserrat', sans-serif;
-            }
-
-            .sidenav-toggler {
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                z-index: 999;
-            }
-
-            #slide-up {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .social-link a {
-                font-size: 18px;
-                line-height: 1;
-                padding: 8px 0;
-                margin-right: 4px;
-                border-radius: 50%;
-                text-align: center;
-                width: 36px;
-                height: 36px;
-            }
-
-            .sidenav li > a > i {
-                margin: 0 28px 0 0;
-                font-size: 24px;
-            }
-
-            .sidenav li > a,
-            .sidenav li > a > i {
-                color: #757575 !important;
-            }
-
-            .sidenav li > a.active,
-            .sidenav li > a.active > i {
-                color: #fff !important;
-                font-weight: bold;
-            }
-
-            /*  */
-            main > .row > .col {
-                padding: 0 !important;
-            }
-
-            h3.section-title::after {
-                content: '';
-                position: relative;
-                display: block;
-                width: 70px;
-                height: 5px;
-                background: #03a9f4;
-                border-radius: 5px;
-                margin-top: 10px;
-            }
-
-            /* skills */
-            .helper {
-                display: inline-block;
-                height: 100%;
-                vertical-align: middle;
-            }
-
-            .skill-item {
-                /* text-align: center; */
-                position: relative;
-            }
-
-            .skill-item .image-container {
-                height: 150px;
-            }
-
-            .skill-item img {
-                transition: 1s ease;
-                vertical-align: middle;
-            }
-
-            .skill-item .skill-overlay-text {
-                color: white;
-                font-size: 1.25rem;
-                font-weight: bold;
-
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                text-align: center;
-            }
-
-            .skill-item:hover img {
-                transition: 1s ease;
-            }
-
-            .skill-item .skill-overlay {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background-color: rgba(0, 0, 0, 0.6);
-                overflow: hidden;
-                width: 100%;
-                height: 0;
-                opacity: 0;
-                transition: 0.5s ease;
-            }
-
-            .skill-item:hover .skill-overlay {
-                height: 100%;
-                opacity: 1;
-            }
-
-            .skill-item:hover img {
-                opacity: 0.2;
-            }
-
-            /* filter */
-            #skills button {
-                width: 120px;
-                margin: 5px;
-                font-weight: 500;
-                border-radius: 50px;
-            }
-        </style>
-
         <title>Patrick Caringal</title>
     </head>
     <body>
@@ -233,76 +102,162 @@
                             </div>
 
                             <div class="row">
-                                <div class="col s6 m3 l2 skill-item center-align">
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: khaki;">
                                     <div class="image-container">
                                         <span class="helper"></span>
-                                        <img class="responsive-img" src="public/img/skills/javascript.svg" style="width: 80px;" />
+                                        <img class="responsive-img" src="public/img/skills/html5.svg" style="width: 70%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">HTML5</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: powderblue;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/css3.svg" style="width: 50%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">CSS3</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: lemonchiffon;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/javascript.svg" style="width: 50%;" />
                                     </div>
                                     <div class="skill-overlay">
                                         <div class="skill-overlay-text">JavaScript</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align">
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: palegreen;">
                                     <div class="image-container">
                                         <span class="helper"></span>
-                                        <img class="responsive-img" src="public/img/skills/nodejs.svg" style="width: 120px;" />
+                                        <img class="responsive-img" src="public/img/skills/nodejs.svg" style="width: 70%;" />
                                     </div>
                                     <div class="skill-overlay">
                                         <div class="skill-overlay-text">Node JS</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="text-align: center;">
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: WHITESMOKE;">
                                     <div class="image-container">
                                         <span class="helper"></span>
-                                        <img class="responsive-img" src="public/img/skills/reactjs.svg" style="width: 100px;" />
+                                        <img class="responsive-img" src="public/img/skills/expressjs.svg" style="width: 70%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">Express JS</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: DIMGRAY;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/reactjs.svg" style="width: 70%;" />
                                     </div>
                                     <div class="skill-overlay">
                                         <div class="skill-overlay-text">React JS</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="text-align: center;">
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: THISTLE;">
                                     <div class="image-container">
                                         <span class="helper"></span>
-                                        <img class="responsive-img" src="public/img/skills/jest.svg" style="width: 80px;" />
+                                        <img class="responsive-img" src="public/img/skills/redux.svg" style="width: 50%;" />
                                     </div>
                                     <div class="skill-overlay">
-                                        <div class="skill-overlay-text">Node JS</div>
+                                        <div class="skill-overlay-text">Redux</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="text-align: center;">
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: AZURE;">
                                     <div class="image-container">
                                         <span class="helper"></span>
-                                        <img class="responsive-img" src="public/img/skills/jest.svg" style="width: 80px;" />
+                                        <img class="responsive-img" src="public/img/skills/typescript.svg" style="width: 70%;" />
                                     </div>
                                     <div class="skill-overlay">
-                                        <div class="skill-overlay-text">Node JS</div>
+                                        <div class="skill-overlay-text">TypeScript</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="text-align: center;">
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: LIGHTGRAY;">
                                     <div class="image-container">
                                         <span class="helper"></span>
-                                        <img class="responsive-img" src="public/img/skills/jest.svg" style="width: 80px;" />
+                                        <img class="responsive-img" src="public/img/skills/reduxsaga.svg" style="width: 70%;" />
                                     </div>
                                     <div class="skill-overlay">
-                                        <div class="skill-overlay-text">Node JS</div>
+                                        <div class="skill-overlay-text">Redux Saga</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="text-align: center;">
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: LIGHTSKYBLUE;">
                                     <div class="image-container">
                                         <span class="helper"></span>
-                                        <img class="responsive-img" src="public/img/skills/jest.svg" style="width: 80px;" />
+                                        <img class="responsive-img" src="public/img/skills/jquery.svg" style="width: 70%;" />
                                     </div>
                                     <div class="skill-overlay">
-                                        <div class="skill-overlay-text">Node JS</div>
+                                        <div class="skill-overlay-text">jQuery</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="text-align: center;">
+
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: TOMATO;">
                                     <div class="image-container">
                                         <span class="helper"></span>
-                                        <img class="responsive-img" src="public/img/skills/jest.svg" style="width: 80px;" />
+                                        <img class="responsive-img" src="public/img/skills/jest.svg" style="width: 50%;" />
                                     </div>
                                     <div class="skill-overlay">
-                                        <div class="skill-overlay-text">Node JS</div>
+                                        <div class="skill-overlay-text">Jest</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: PEACHPUFF;">
+                                    <div class="image-container">
+                                        <span class="helper2"></span>
+                                        <img class="responsive-img" src="public/img/skills/enzyme.svg" style="width: 40%;" />
+                                    </div>
+                                    <div style="position: absolute; bottom: 20%; left: 0; right: 0;">
+                                        <span style="font-weight: bold; color: #e0565b;">Enzyme</span>
+                                    </div>
+                                    <!-- <span style="position: absolute; bottom: 15%; left: 35%; font-weight: bold; color: #e0565b;">Enzyme</span> -->
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">Enzyme</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: SILVER;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/bootstrap.svg" style="width: 50%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">Bootstrap</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: moccasin;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/materializecss.svg" style="width: 70%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">Materializecss</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: PALETURQUOISE;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/materialui.svg" style="width: 70%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">Material UI</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: YELLOWGREEN;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/mongodb.svg" style="width: 70%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">MongoDB</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: SNOW;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/couchbase.svg" style="width: 50%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">Couchbase</div>
                                     </div>
                                 </div>
                             </div>

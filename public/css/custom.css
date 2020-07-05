@@ -1,3 +1,141 @@
+main {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main > .row > .col {
+    padding: 0 !important;
+}
+
+/* Sidenav */
+.sidenav .social-link a {
+    font-size: 18px;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+}
+
+.sidenav li > a > i {
+    margin: 0 28px 0 0;
+    font-size: 24px;
+}
+
+.sidenav li > a,
+.sidenav li > a > i {
+    color: #757575 !important;
+}
+
+.sidenav li > a.active,
+.sidenav li > a.active > i {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* Floating buttons */
+#sidenav-opener,
+#sidenav-closer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+#slide-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Section */
+h3.section-title::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 5px;
+    background: #03a9f4;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Skills section */
+#skills button {
+    width: 120px;
+    margin: 5px;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.helper2 {
+    display: inline-block;
+    height: 80%;
+    vertical-align: middle;
+}
+
+.skill-item {
+    /* text-align: center; */
+    position: relative;
+}
+
+.skill-item .image-container {
+    height: 200px;
+}
+
+.skill-item img {
+    transition: 1s ease;
+    vertical-align: middle;
+}
+
+.skill-item .skill-overlay-text {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.skill-item:hover img {
+    transition: 1s ease;
+}
+
+.skill-item .skill-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.skill-item:hover .skill-overlay {
+    height: 100%;
+    opacity: 1;
+}
+
+.skill-item:hover img {
+    opacity: 0.2;
+}
+
+/* Helper class */
 .pb-2 {
     padding-bottom: 0.5rem;
 }
