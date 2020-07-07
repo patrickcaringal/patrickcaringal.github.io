@@ -13,6 +13,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
         <title>Patrick Caringal</title>
+        <style>
+            .skills-grid {
+                min-height: 800px;
+            }
+        </style>
     </head>
     <body>
         <main>
@@ -85,14 +90,14 @@
                             <h3 class="mb-5 blue-grey-text text-darken-2 section-title" style="font-weight: bold; font-size: 2rem; margin-top: 0;">Skills</h3>
 
                             <div class="row">
-                                <div class="col s12 center-align">
-                                    <button class="btn waves-effect waves-light white teal-text text-darken-5">
+                                <div id="skill-filters" class="col s12 center-align">
+                                    <button class="btn waves-effect waves-light white teal-text text-darken-5" data-filter="*">
                                         All
                                     </button>
-                                    <button class="btn waves-effect waves-light teal lighten-1">
+                                    <button class="btn waves-effect waves-light teal lighten-1" data-filter=".frontend">
                                         Frontend
                                     </button>
-                                    <button class="btn waves-effect waves-light teal lighten-1">
+                                    <button class="btn waves-effect waves-light teal lighten-1" data-filter=".backend">
                                         Backend
                                     </button>
                                     <button class="btn waves-effect waves-light teal lighten-1">
@@ -101,8 +106,8 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col s6 m3 l2 skill-item center-align" style="background: #fecb89;">
+                            <div class="row skills-grid">
+                                <div class="col s6 m3 l2 skill-item center-align frontend" style="background: #fecb89;">
                                     <div class="image-container">
                                         <span class="helper"></span>
                                         <img class="responsive-img" src="public/img/skills/html5.svg" style="width: 70%;" />
@@ -111,7 +116,7 @@
                                         <div class="skill-overlay-text">HTML5</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="background: powderblue;">
+                                <div class="col s6 m3 l2 skill-item center-align frontend" style="background: powderblue;">
                                     <div class="image-container">
                                         <span class="helper"></span>
                                         <img class="responsive-img" src="public/img/skills/css3.svg" style="width: 50%;" />
@@ -120,7 +125,7 @@
                                         <div class="skill-overlay-text">CSS3</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="background: #faf0af;">
+                                <div class="col s6 m3 l2 skill-item center-align frontend backend" style="background: #faf0af;">
                                     <div class="image-container">
                                         <span class="helper"></span>
                                         <img class="responsive-img" src="public/img/skills/javascript.svg" style="width: 50%;" />
@@ -129,7 +134,7 @@
                                         <div class="skill-overlay-text">JavaScript</div>
                                     </div>
                                 </div>
-                                <div class="col s6 m3 l2 skill-item center-align" style="background: #b6eb7a;">
+                                <div class="col s6 m3 l2 skill-item center-align backend" style="background: #b6eb7a;">
                                     <div class="image-container">
                                         <span class="helper"></span>
                                         <img class="responsive-img" src="public/img/skills/nodejs.svg" style="width: 70%;" />
@@ -259,6 +264,33 @@
                                         <div class="skill-overlay-text">Couchbase</div>
                                     </div>
                                 </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: #ffcb74;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/git.svg" style="width: 50%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">Git</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: #e8ead3;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/heroku.svg" style="width: 50%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">Heroku</div>
+                                    </div>
+                                </div>
+                                <div class="col s6 m3 l2 skill-item center-align" style="background: #f4f6ff;">
+                                    <div class="image-container">
+                                        <span class="helper"></span>
+                                        <img class="responsive-img" src="public/img/skills/amazonwebservices.svg" style="width: 50%;" />
+                                    </div>
+                                    <div class="skill-overlay">
+                                        <div class="skill-overlay-text">AWS</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -276,7 +308,41 @@
 
         <script type="text/javascript" src="public/js/jquery.min.js"></script>
         <script type="text/javascript" src="public/js/materialize.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
         <script>
+            let $skills = new Isotope('.skills-grid', {
+                itemSelector: '.skill-item',
+                layoutMode: 'masonry'
+
+                // layoutMode: 'fitRows'
+                // transitionDuration: '0.1s'
+
+                // getSortData: {
+                //     name: '.name',
+                //     category: '[data-category]'
+                // },
+                // resize: false
+            });
+
+            // $('#filters').on('click', 'button', function () {
+            //     var filterValue = $(this).attr('data-filter');
+            //     // use filterFn if matches value
+            //     filterValue = filterFns[filterValue] || filterValue;
+            //     $skills-grid.isotope({ filter: filterValue });
+            // });
+
+            const skillFilter = document.getElementById('skill-filters');
+            const skillFilterButtons = Array.prototype.slice.call(skillFilter.getElementsByTagName('button'));
+
+            skillFilterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // console.log(button.getAttribute('data-filter'));
+                    const filter = button.getAttribute('data-filter');
+                    $skills.arrange({ filter });
+                });
+            });
+
             $(document).ready(function () {
                 $('.sidenav').sidenav({
                     // edge: 'right',
