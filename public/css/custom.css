@@ -6,6 +6,61 @@ main > .row > .col {
     padding: 0 !important;
 }
 
+.section {
+    padding: 60px 0 !important;
+}
+
+/* Animation */
+#navbar {
+    -webkit-transition: height 0.3s ease, box-shadow 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease, box-shadow 0.3s ease-in-out;
+    -o-transition: height 0.3s ease, box-shadow 0.3s ease-in-out;
+    -ms-transition: height 0.3s ease, box-shadow 0.3s ease-in-out;
+    transition: height 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+#navbar .brand-logo {
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+
+#navbar a.navbar-item {
+    -webkit-transition: font-size 0.3s ease, padding-top 0.3s ease;
+    -moz-transition: font-size 0.3s ease, padding-top 0.3s ease;
+    -o-transition: font-size 0.3s ease, padding-top 0.3s ease;
+    -ms-transition: font-size 0.3s ease, padding-top 0.3s ease;
+    transition: font-size 0.3s ease, padding-top 0.3s ease;
+}
+
+@media only screen and (min-width: 600px) {
+    .nav-expaneded {
+        height: 70px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    #navbar .big-brand-logo {
+        font-size: 2.5rem !important;
+    }
+
+    #navbar a.big-navbar-item {
+        font-size: 1.1rem !important;
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #navbar .brand-logo {
+        font-size: 1.5rem;
+    }
+}
+
 /* Sidenav */
 .sidenav .social-link a {
     font-size: 18px;
@@ -35,7 +90,6 @@ main > .row > .col {
 }
 
 /* Floating buttons */
-#sidenav-opener,
 #sidenav-closer {
     position: fixed;
     top: 20px;
@@ -50,6 +104,12 @@ main > .row > .col {
 }
 
 /* Section */
+h3.section-title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
 h3.section-title::after {
     content: '';
     position: relative;
@@ -62,6 +122,10 @@ h3.section-title::after {
 }
 
 /* Skills section */
+#skills-grid {
+    min-height: 800px;
+}
+
 #skills button {
     width: 120px;
     margin: 5px;
@@ -91,8 +155,12 @@ h3.section-title::after {
 }
 
 .skill-item img {
-    transition: 1s ease;
     vertical-align: middle;
+    -webkit-transition: opacity 0.1s ease;
+    -moz-transition: opacity 0.1s ease;
+    -o-transition: opacity 0.1s ease;
+    -ms-transition: opacity 0.1s ease;
+    transition: opacity 0.1s ease;
 }
 
 .skill-item .skill-overlay-text {
@@ -109,10 +177,6 @@ h3.section-title::after {
     text-align: center;
 }
 
-.skill-item:hover img {
-    transition: 1s ease;
-}
-
 .skill-item .skill-overlay {
     position: absolute;
     bottom: 0;
@@ -123,7 +187,12 @@ h3.section-title::after {
     width: 100%;
     height: 0;
     opacity: 0;
-    transition: 0.5s ease;
+
+    -webkit-transition: height 0.25s ease, opacity 0.25s ease;
+    -moz-transition: height 0.25s ease, opacity 0.25s ease;
+    -o-transition: height 0.25s ease, opacity 0.25s ease;
+    -ms-transition: height 0.25s ease, opacity 0.25s ease;
+    transition: height 0.25s ease, opacity 0.25s ease;
 }
 
 .skill-item:hover .skill-overlay {
@@ -133,6 +202,19 @@ h3.section-title::after {
 
 .skill-item:hover img {
     opacity: 0.2;
+}
+
+/* Achievements section */
+#achievements .classification {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+#achievements .achievement-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
 }
 
 /* Helper class */
@@ -152,20 +234,32 @@ h3.section-title::after {
     padding-bottom: 3rem;
 }
 
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem !important;
+}
+
 .mb-2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem !important;
 }
 
 .mb-3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
 }
 
 .mb-4 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
 }
 
 .mb-5 {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
+}
+
+.txt-xs {
+    font-size: 0.75rem !important;
 }
 
 /* 
@@ -174,3 +268,9 @@ h3.section-title::after {
 4 * 1.5rem
 5 * 3rem
  */
+
+/*  
+ 0.75 - 12px
+ 1.5 - 24px
+ 2 - 32px
+  */

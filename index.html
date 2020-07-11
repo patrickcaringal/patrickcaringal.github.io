@@ -5,27 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link type="text/css" rel="stylesheet" href="public/css/custom.css" media="screen,projection" />
-        <link type="text/css" rel="stylesheet" href="public/css/materialize.min.css" media="screen,projection" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" media="screen,projection" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@900&family=Gugi&display=swap" rel="stylesheet" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
         <title>Patrick Caringal</title>
-        <style>
-            .skills-grid {
-                min-height: 800px;
-            }
-        </style>
     </head>
     <body>
         <main>
+            <div class="navbar-fixed">
+                <nav id="navbar">
+                    <div class="nav-wrapper blue-grey darken-2">
+                        <a href="#!" class="brand-logo left">Patrick Caringal</a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#about" class="navbar-item">About</a></li>
+                            <li><a href="#skills" class="navbar-item">Skills</a></li>
+                            <li><a href="#portfolio" class="navbar-item">Portfolio</a></li>
+                            <li><a href="#achievements" class="navbar-item">Achievements</a></li>
+                        </ul>
+                        <a id="sidenav-opener" href="#" data-target="slide-out" class="sidenav-trigger right navbar-item"><i class="material-icons">menu</i></a>
+                    </div>
+                </nav>
+            </div>
+
             <ul id="slide-out" class="sidenav grey darken-4">
                 <li class="pb-2">
                     <div class="user-view center-align">
                         <img class="circle" src="public/img/img_avatar3.png" style="margin: 0 auto; width: 7.5rem; height: auto; border: 0.375rem solid #424242;" />
-                        <span class="white-text name" style="font-size: 1.5rem;">Patrick Caringal</span>
+                        <span class="white-text name" style="font-size: 1.5rem; font-family: 'Raleway', sans-serif; text-transform: uppercase;">Patrick Caringal</span>
                     </div>
                 </li>
                 <li class="pb-4">
@@ -50,31 +60,30 @@
                 </li>
             </ul>
 
-            <button id="sidenav-opener" href="#" data-target="slide-out" class="btn-floating btn-large waves-effect waves-light teal lighten-2 sidenav-trigger show-on-large scale-transition"><i class="material-icons">menu</i></button>
             <button id="sidenav-closer" href="#" data-target="slide-out" class="btn-floating btn-large waves-effect waves-light teal lighten-2 scale-transition scale-out"><i class="material-icons">close</i></button>
             <button id="slide-up" type="button" class="btn-floating btn-large waves-effect waves-light teal lighten-2 scale-transition scale-out"><i class="material-icons">keyboard_arrow_up </i></button>
 
             <div class="row">
                 <div class="col s12">
-                    <div id="about" class="section scrollspy" style="padding: 60px 0;">
+                    <div id="about" class="section scrollspy">
                         <div class="container">
-                            <h3 class="mb-5 blue-grey-text text-darken-2 section-title" style="font-weight: bold; font-size: 2rem; margin-top: 0;">About</h3>
+                            <h3 class="mb-5 blue-grey-text text-darken-2 section-title">About</h3>
 
                             <div class="col s12 center-align mb-5"><img class="responsive-img circle" src="public/img/img_avatar3.png" style="max-width: 200px;" /></div>
 
                             <div class="row">
                                 <div class="col s12">
-                                    <p style="margin-top: 0;" class="blue-grey-text text-darken-3">
+                                    <p class="blue-grey-text text-darken-3 mt-0">
                                         I'm a Full stack Software Engineer based in Metro Manila, Philippines. I have 3 years of professional working experience in Software Development carrying both or either back-end and front-end development.
                                     </p>
                                     <p class="blue-grey-text text-darken-3">
                                         My expertise are JavaScript, Node JS and React JS. Apart from development, I also have strong knowledge on Unit and Intergration testing on JavaScript codebases.
                                     </p>
                                     <p class="blue-grey-text text-darken-3">
-                                        I'm an Idealistic type of person so I enjoy using my obsessive attention to detail by focusing on wrinting clean, elegant and efficient code.
+                                        I'm an Idealistic type of person so I enjoy using my obsessive attention to detail by focusing on writing clean, elegant and efficient code.
                                     </p>
                                     <p class="blue-grey-text text-darken-3">
-                                        As Software development evolves rapidly, I make sure that I stay at the top of the industry keeping track of the emerging trends by continuously learning and upskilling my skillset.
+                                        As Software development evolves rapidly, I make sure that I stay on top of the industry keeping track of the emerging trends by continuously learning and upskilling my skillset.
                                     </p>
 
                                     <p class="blue-grey-text text-darken-3">
@@ -85,9 +94,9 @@
                         </div>
                     </div>
 
-                    <div id="skills" class="section scrollspy teal lighten-5 animated" style="padding: 60px 0;">
+                    <div id="skills" class="section scrollspy teal lighten-5">
                         <div class="container">
-                            <h3 class="mb-5 blue-grey-text text-darken-2 section-title" style="font-weight: bold; font-size: 2rem; margin-top: 0;">Skills</h3>
+                            <h3 class="mb-5 blue-grey-text text-darken-2 section-title">Skills</h3>
 
                             <div class="row">
                                 <div id="skill-filters" class="col s12 center-align">
@@ -106,7 +115,7 @@
                                 </div>
                             </div>
 
-                            <div class="row skills-grid">
+                            <div class="row" id="skills-grid">
                                 <div class="col s6 m3 l2 skill-item center-align frontend" style="background: #fecb89;">
                                     <div class="image-container">
                                         <span class="helper"></span>
@@ -295,20 +304,80 @@
                         </div>
                     </div>
 
-                    <div id="portfolio" class="section scrollspy" style="height: 1000px;">
-                        <h3>portfolio</h3>
+                    <div id="portfolio" class="section scrollspy">
+                        <div class="container">
+                            <h3 class="mb-5 blue-grey-text text-darken-2 section-title">Portfolio</h3>
+
+                            <div class="row"></div>
+                        </div>
                     </div>
 
-                    <div id="achievements" class="section scrollspy" style="height: 1000px; background: salmon;">
-                        <h3>achievements</h3>
+                    <div id="achievements" class="section scrollspy teal lighten-5">
+                        <div class="container">
+                            <h3 class="mb-5 blue-grey-text text-darken-2 section-title">Achievements</h3>
+
+                            <div class="row mb-5">
+                                <div class="col s12"><h3 class="mb-4 blue-grey-text text-darken-2 classification">Professional</h3></div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card yellow lighten-3 blue-grey-text text-darken-3">
+                                        <div class="card-content">
+                                            <p class="mb-3 achievement-title">Employee of the Year</p>
+                                            <p class="txt-xs mb-1">OPSolutions PH Inc.</p>
+                                            <p class="txt-xs">December 2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card yellow lighten-3 blue-grey-text text-darken-3">
+                                        <div class="card-content">
+                                            <p class="mb-3 achievement-title">Employee of the Month</p>
+                                            <p class="txt-xs mb-1">OPSolutions PH Inc.</p>
+                                            <p class="txt-xs">July 2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12"><h3 class="mb-4 blue-grey-text text-darken-2 classification">Academic</h3></div>
+
+                                <div class="col s12 m6 l4">
+                                    <div class="card yellow lighten-3 blue-grey-text text-darken-3">
+                                        <div class="card-content">
+                                            <p class="mb-3 achievement-title">Cum Laude</p>
+                                            <p class="txt-xs mb-1">Pamantasan ng Cabuyao</p>
+                                            <p class="txt-xs">April 2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card yellow lighten-3 blue-grey-text text-darken-3">
+                                        <div class="card-content">
+                                            <p class="mb-3 achievement-title">Best in Internship</p>
+                                            <p class="txt-xs mb-1">Pamantasan ng Cabuyao</p>
+                                            <p class="txt-xs">April 2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card yellow lighten-3 blue-grey-text text-darken-3">
+                                        <div class="card-content">
+                                            <p class="mb-3 achievement-title">Best in Thesis</p>
+                                            <p class="txt-xs mb-1">Pamantasan ng Cabuyao</p>
+                                            <p class="txt-xs">April 2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <script type="text/javascript" src="public/js/jquery.min.js"></script>
-        <script type="text/javascript" src="public/js/materialize.min.js"></script>
-        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 
         <script>
             // Sidenav
@@ -327,8 +396,8 @@
             });
 
             // Scrollspy
-            const $scrollspy = M.ScrollSpy.init(document.getElementsByClassName('scrollspy')[0], {
-                scrollOffset: 0
+            const $scrollspy = M.ScrollSpy.init(document.querySelectorAll('.scrollspy'), {
+                scrollOffset: screen.width <= 600 ? 25 : 50
             });
 
             // Slide up
@@ -339,15 +408,25 @@
             });
 
             window.onscroll = function () {
+                const navbar = document.getElementById('navbar');
+                const logo = document.getElementsByClassName('brand-logo')[0];
+                const navbarItems = Array.prototype.slice.call(document.getElementsByClassName('navbar-item'));
+
                 if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
                     slideUpButton.classList.remove('scale-out');
+                    navbar.classList.add('nav-expaneded');
+                    logo.classList.add('big-brand-logo');
+                    navbarItems.forEach(item => item.classList.add('big-navbar-item'));
                 } else {
                     slideUpButton.classList.add('scale-out');
+                    navbar.classList.remove('nav-expaneded');
+                    logo.classList.remove('big-brand-logo');
+                    navbarItems.forEach(item => item.classList.remove('big-navbar-item'));
                 }
             };
 
             // Skills
-            const $skillsIsotope = new Isotope('.skills-grid', {
+            const $skillsIsotope = new Isotope(document.getElementById('skills-grid'), {
                 itemSelector: '.skill-item'
             });
 
