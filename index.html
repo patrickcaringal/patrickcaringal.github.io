@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@900&family=Gugi&display=swap" rel="stylesheet" />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <title>Patrick Caringal</title>
     </head>
@@ -25,6 +25,7 @@
                             <li><a href="#skills" class="navbar-item">Skills</a></li>
                             <li><a href="#portfolio" class="navbar-item">Portfolio</a></li>
                             <li><a href="#achievements" class="navbar-item">Achievements</a></li>
+                            <li><a href="#contact" class="navbar-item">Contact</a></li>
                         </ul>
                         <a id="sidenav-opener" href="#" data-target="slide-out" class="sidenav-trigger right navbar-item"><i class="material-icons">menu</i></a>
                     </div>
@@ -58,6 +59,9 @@
                 <li>
                     <a class="sidenav-close waves-effect grey-text text-darken-1" href="#achievements"><i class="fas fa-trophy grey-text text-darken-1"></i> Achievements</a>
                 </li>
+                <li>
+                    <a class="sidenav-close waves-effect grey-text text-darken-1" href="#contact"><i class="fas fa-phone-alt grey-text text-darken-1"></i> Contact</a>
+                </li>
             </ul>
 
             <button id="sidenav-closer" href="#" data-target="slide-out" class="btn-floating btn-large waves-effect waves-light teal lighten-2 scale-transition scale-out"><i class="material-icons">close</i></button>
@@ -69,9 +73,9 @@
                         <div class="container">
                             <h3 class="mb-5 blue-grey-text text-darken-2 section-title">About</h3>
 
-                            <div class="col s12 center-align mb-5"><img class="responsive-img circle" src="public/img/img_avatar3.png" style="max-width: 200px;" /></div>
+                            <div class="col s12 center-align mb-5"><img class="responsive-img circle" src="public/img/img_avatar3.png" style="max-width: 200px;" data-aos="zoom-in" /></div>
 
-                            <div class="row">
+                            <div class="row" data-aos="fade-in" data-aos-delay="300">
                                 <div class="col s12">
                                     <p class="blue-grey-text text-darken-3 mt-0">
                                         I'm a Full stack Software Engineer based in Metro Manila, Philippines. I have 3 years of professional working experience in Software Development carrying both or either back-end and front-end development.
@@ -98,7 +102,7 @@
                         <div class="container">
                             <h3 class="mb-5 blue-grey-text text-darken-2 section-title">Skills</h3>
 
-                            <div class="row">
+                            <div class="row" data-aos="fade-up">
                                 <div id="skill-filters" class="col s12 center-align">
                                     <button class="btn waves-effect waves-light white teal-text text-darken-5" data-filter="*">
                                         All
@@ -115,7 +119,7 @@
                                 </div>
                             </div>
 
-                            <div class="row" id="skills-grid">
+                            <div class="row" id="skills-grid" data-aos="fade-up" data-aos-delay="100">
                                 <div class="col s6 m3 l2 skill-item center-align frontend" style="background: #fecb89;">
                                     <div class="image-container">
                                         <span class="helper"></span>
@@ -316,7 +320,7 @@
                         <div class="container">
                             <h3 class="mb-5 blue-grey-text text-darken-2 section-title">Achievements</h3>
 
-                            <div class="row mb-5">
+                            <div class="row mb-5" data-aos="fade-up">
                                 <div class="col s12"><h3 class="mb-4 blue-grey-text text-darken-2 classification">Professional</h3></div>
                                 <div class="col s12 m6 l4">
                                     <div class="card yellow lighten-3 blue-grey-text text-darken-3">
@@ -338,7 +342,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row" data-aos="fade-up" data-aos-delay="100">
                                 <div class="col s12"><h3 class="mb-4 blue-grey-text text-darken-2 classification">Academic</h3></div>
 
                                 <div class="col s12 m6 l4">
@@ -371,6 +375,54 @@
                             </div>
                         </div>
                     </div>
+
+                    <div id="contact" class="section scrollspy">
+                        <div class="container">
+                            <h3 class="mb-5 blue-grey-text text-darken-2 section-title">Contact</h3>
+
+                            <div class="row">
+                                <div class="col s12 m8">
+                                    <div class="card" style="border-radius: 8px;">
+                                        <div class="card-content" style="padding: 20px 50px 20px 50px;">
+                                            <div class="row">
+                                                <div class="input-field col s6">
+                                                    <input id="name" type="text" class="validate" />
+                                                    <label for="name">Your Name</label>
+                                                </div>
+                                                <div class="input-field col s6">
+                                                    <input id="email" type="text" class="validate" />
+                                                    <label for="email">Your Email</label>
+                                                </div>
+                                                <div class="input-field col s12">
+                                                    <input id="subject" type="text" class="validate" />
+                                                    <label for="subject">Subject</label>
+                                                </div>
+                                                <div class="input-field col s12">
+                                                    <textarea id="textarea1" class="materialize-textarea" style="height: 7rem;"></textarea>
+                                                    <label for="textarea1">Your Message </label>
+                                                </div>
+                                                <div class="col s12 center-align" style="margin-top: 1rem;">
+                                                    <button class="btn waves-effect waves-light teal lighten-1" style="border-radius: 50px; padding-left: 30px; padding-right: 30px;"><i class="material-icons right">send </i> Send</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card" style="border-radius: 8px;">
+                                        <div class="card-content" style="padding: 30px 50px !important;">
+                                            <div class="row black-text">
+                                                <i class="fab fa-facebook-f"></i>
+                                                <i class="fab fa-instagram"></i>
+                                                <i class="fab fa-linkedin-in"></i>
+                                                <i class="fab fa-github"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -378,8 +430,16 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
         <script>
+            // AOS.init();
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out-back',
+                once: true
+            });
+
             // Sidenav
             const sidenavOpenerButton = document.getElementById('sidenav-opener');
             const sidenavCloserButton = document.getElementById('sidenav-closer');
