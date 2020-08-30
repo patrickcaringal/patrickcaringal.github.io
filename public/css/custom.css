@@ -217,6 +217,15 @@ h3.section-title::after {
     text-transform: uppercase;
 }
 
+/* Contact */
+#contact a i {
+    font-size: 1.25rem !important;
+}
+
+#contact a {
+    margin-right: 15px;
+}
+
 /* Helper class */
 .pb-2 {
     padding-bottom: 0.5rem;
