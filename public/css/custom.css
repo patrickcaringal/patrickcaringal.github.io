@@ -21,14 +21,13 @@ main > .row > .col {
 
 #navbar .brand-logo {
     margin-left: 20px;
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
+    display: inline-block;
 
-    -webkit-transition: font-size 0.3s ease;
-    -moz-transition: font-size 0.3s ease;
-    -o-transition: font-size 0.3s ease;
-    -ms-transition: font-size 0.3s ease;
-    transition: font-size 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 #navbar a.navbar-item {
@@ -40,25 +39,49 @@ main > .row > .col {
 }
 
 @media only screen and (min-width: 600px) {
+    .nav-collapsed {
+        background: none;
+        box-shadow: none;
+    }
+
+    /* .nav-collapsed .nav-wrapper {
+        background: transparent !important;
+    } */
+
     .nav-expaneded {
         height: 70px;
-        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .nav-expaneded .nav-wrapper {
+        background: khaki;
     }
 
     #navbar .big-brand-logo {
-        font-size: 2.5rem !important;
+        transform: scale(1.15);
     }
 
     #navbar a.big-navbar-item {
         font-size: 1.1rem !important;
         padding-top: 3px;
     }
+
+    /* .parallax img {
+        width: 200%;
+    } */
 }
 
 @media only screen and (max-width: 600px) {
     #navbar .brand-logo {
         font-size: 1.5rem;
     }
+}
+
+/* .parallax img {
+    width: 0;
+} */
+
+.parallax-container {
+    height: 100vh !important;
 }
 
 /* Sidenav */
