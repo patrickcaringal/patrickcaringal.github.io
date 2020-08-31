@@ -22,8 +22,9 @@
                 <nav id="navbar" class="nav-collapsed">
                     <div class="nav-wrapper">
                         <div class="container">
-                            <a href="#home" class="brand-logo left">
-                                <img src="public/img/pat-logo.png" style="height: 64px; display: block" />
+                            <a href="#" class="brand-logo left">
+                                <img src="public/img/pat-logo-white.png" style="height: 64px; display: block" class="white-logo" />
+                                <img src="public/img/pat-logo.png" style="height: 64px; display: block" class="black-logo hide" />
                             </a>
                             <ul class="right hide-on-med-and-down">
                                 <li><a href="#portfolio" class="navbar-item">Portfolio</a></li>
@@ -75,9 +76,10 @@
             <div class="row">
                 <div class="col s12">
                     <div id="home" class="section scrollspy">
-                        <div class="container">
-                            <h1><b>PATRICK CARINGAL</b></h1>
-                            <h5>Software Engineer</h5>
+                        <div class="container" style="text-align: center">
+                            <h3 style="font-weight: bold">I can be your Key Player.</h3>
+                            <h4 style="letter-spacing: 10px; text-transform: uppercase">Patrick Caringal</h4>
+                            <span style="text-transform: uppercase; letter-spacing: 5px">Full Stack Software Engineer</span>
                         </div>
                     </div>
                 </div>
@@ -470,14 +472,18 @@
                 window.onscroll = function () {
                     const navbar = document.getElementById('navbar');
                     const logo = document.getElementsByClassName('brand-logo')[0];
+                    const whitelogo = document.getElementsByClassName('white-logo')[0];
+                    const blacklogo = document.getElementsByClassName('black-logo')[0];
                     const navbarItems = Array.prototype.slice.call(document.getElementsByClassName('navbar-item'));
 
-                    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+                    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                         // expand nav
                         slideUpButton.classList.remove('scale-out');
                         navbar.classList.add('nav-expaneded');
                         navbar.classList.remove('nav-collapsed');
                         logo.classList.add('big-brand-logo');
+                        whitelogo.classList.add('hide');
+                        blacklogo.classList.remove('hide');
                         navbarItems.forEach(item => item.classList.add('big-navbar-item'));
                     } else {
                         // collapse nav
@@ -485,6 +491,8 @@
                         navbar.classList.remove('nav-expaneded');
                         navbar.classList.add('nav-collapsed');
                         logo.classList.remove('big-brand-logo');
+                        whitelogo.classList.remove('hide');
+                        blacklogo.classList.add('hide');
                         navbarItems.forEach(item => item.classList.remove('big-navbar-item'));
                     }
                 };

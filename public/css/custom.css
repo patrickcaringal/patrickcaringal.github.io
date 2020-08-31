@@ -39,12 +39,25 @@ main > .row > .col {
     transition: color 0.3s ease, font-size 0.3s ease, padding-top 0.3s ease;
 }
 
+#navbar .nav-wrapper {
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+
 nav ul a {
     text-transform: uppercase;
 }
 
 nav ul a:hover {
     background-color: transparent !important;
+}
+
+nav ul a.active {
+    color: #03a9f4 !important;
+    font-weight: 600;
 }
 
 /* BIG SCREEN */
@@ -66,13 +79,13 @@ nav ul a:hover {
     }
 
     #navbar .big-brand-logo {
-        transform: scale(1.15);
+        transform: scale(1.2);
     }
 
     #navbar a.big-navbar-item {
         color: #000;
         /* font-size: 1.1rem !important; */
-        padding-top: 3px;
+        padding-top: 5px;
     }
 }
 
@@ -288,6 +301,10 @@ h3.section-title::after {
 
 .mt-0 {
     margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
 }
 
 .mb-1 {
