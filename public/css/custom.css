@@ -12,6 +12,8 @@ main > .row > .col {
 
 /* Animation */
 #navbar {
+    background: none;
+
     -webkit-transition: height 0.3s ease, box-shadow 0.3s ease-in-out;
     -moz-transition: height 0.3s ease, box-shadow 0.3s ease-in-out;
     -o-transition: height 0.3s ease, box-shadow 0.3s ease-in-out;
@@ -20,47 +22,103 @@ main > .row > .col {
 }
 
 #navbar .brand-logo {
-    margin-left: 20px;
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
+    display: inline-block;
 
-    -webkit-transition: font-size 0.3s ease;
-    -moz-transition: font-size 0.3s ease;
-    -o-transition: font-size 0.3s ease;
-    -ms-transition: font-size 0.3s ease;
-    transition: font-size 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 #navbar a.navbar-item {
-    -webkit-transition: font-size 0.3s ease, padding-top 0.3s ease;
-    -moz-transition: font-size 0.3s ease, padding-top 0.3s ease;
-    -o-transition: font-size 0.3s ease, padding-top 0.3s ease;
-    -ms-transition: font-size 0.3s ease, padding-top 0.3s ease;
-    transition: font-size 0.3s ease, padding-top 0.3s ease;
+    -webkit-transition: color 0.3s ease, font-size 0.3s ease, padding-top 0.3s ease;
+    -moz-transition: color 0.3s ease, font-size 0.3s ease, padding-top 0.3s ease;
+    -o-transition: color 0.3s ease, font-size 0.3s ease, padding-top 0.3s ease;
+    -ms-transition: color 0.3s ease, font-size 0.3s ease, padding-top 0.3s ease;
+    transition: color 0.3s ease, font-size 0.3s ease, padding-top 0.3s ease;
 }
 
+#navbar .nav-wrapper {
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+
+nav ul a {
+    text-transform: uppercase;
+}
+
+nav ul a:hover {
+    background-color: transparent !important;
+}
+
+nav ul a.active {
+    color: #03a9f4 !important;
+    font-weight: 600;
+}
+
+/* BIG SCREEN */
 @media only screen and (min-width: 600px) {
+    .nav-collapsed {
+        box-shadow: none;
+    }
+
+    .nav-collapsed .nav-wrapper {
+        background: transparent !important;
+    }
+
     .nav-expaneded {
         height: 70px;
-        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .nav-expaneded .nav-wrapper {
+        background: #fff !important;
     }
 
     #navbar .big-brand-logo {
-        font-size: 2.5rem !important;
+        transform: scale(1.2);
     }
 
     #navbar a.big-navbar-item {
-        font-size: 1.1rem !important;
-        padding-top: 3px;
+        color: #000;
+        /* font-size: 1.1rem !important; */
+        padding-top: 5px;
     }
 }
 
+/* SMALL SCREEN */
 @media only screen and (max-width: 600px) {
-    #navbar .brand-logo {
+    /* #navbar .brand-logo {
         font-size: 1.5rem;
-    }
+    } */
 }
 
+/* #region */
+/* Landing */
+#home {
+    /* background: silver; */
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.55)), url('../img/landing-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 60%;
+    color: #fff;
+    /* background: khaki; */
+}
+
+/* re */
 /* Sidenav */
 .sidenav .social-link a {
     font-size: 18px;
@@ -227,6 +285,23 @@ h3.section-title::after {
 }
 
 /* Helper class */
+
+.pt-2 {
+    padding-top: 0.5rem;
+}
+
+.pt-3 {
+    padding-top: 1rem;
+}
+
+.pt-4 {
+    padding-top: 1.5rem;
+}
+
+.pt-5 {
+    padding-top: 3rem;
+}
+
 .pb-2 {
     padding-bottom: 0.5rem;
 }
@@ -245,6 +320,10 @@ h3.section-title::after {
 
 .mt-0 {
     margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
 }
 
 .mb-1 {
@@ -283,3 +362,4 @@ h3.section-title::after {
  1.5 - 24px
  2 - 32px
   */
+/* #endregion */
