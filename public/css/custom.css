@@ -60,46 +60,51 @@ nav ul a.active {
     font-weight: 600;
 }
 
-/* BIG SCREEN */
+.nav-collapsed {
+    box-shadow: none;
+}
+
+.nav-collapsed .nav-wrapper {
+    background: transparent !important;
+}
+
+.nav-expaneded {
+    height: 70px;
+}
+
+.nav-expaneded .nav-wrapper {
+    background: #fff !important;
+}
+
+#navbar .big-brand-logo {
+    transform: scale(1.2);
+}
+
+#navbar a.big-navbar-item {
+    color: #333;
+    padding-top: 5px;
+}
+
+/* medium up */
 @media only screen and (min-width: 600px) {
-    .nav-collapsed {
-        box-shadow: none;
-    }
+}
 
-    .nav-collapsed .nav-wrapper {
-        background: transparent !important;
-    }
-
-    .nav-expaneded {
-        height: 70px;
-    }
-
-    .nav-expaneded .nav-wrapper {
-        background: #fff !important;
-    }
-
-    #navbar .big-brand-logo {
-        transform: scale(1.2);
-    }
-
-    #navbar a.big-navbar-item {
-        color: #000;
-        /* font-size: 1.1rem !important; */
-        padding-top: 5px;
+/* medium only */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    #navbar .brand-logo {
+        margin-left: 10%;
     }
 }
 
-/* SMALL SCREEN */
+/* small only */
 @media only screen and (max-width: 600px) {
-    /* #navbar .brand-logo {
-        font-size: 1.5rem;
-    } */
+    #navbar .brand-logo {
+        margin-left: 3%;
+    }
 }
 
-/* #region */
 /* Landing */
 #home {
-    /* background: silver; */
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.55)), url('../img/landing-bg.jpg');
     background-position: center;
@@ -111,24 +116,41 @@ nav ul a.active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    justify-content: space-evenly;
-    height: 60%;
+    height: 80%;
     color: #fff;
-    /* background: khaki; */
 }
 
-/* re */
+#home h2.heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#home h5.subheading {
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+#home span.subheading {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* #region */
 /* Sidenav */
-.sidenav .social-link a {
-    font-size: 18px;
-    line-height: 1;
+.social-link a {
+    font-size: 20px;
+    line-height: 1.75;
     padding: 8px 0;
-    margin-right: 4px;
+    margin-right: 15px;
     border-radius: 50%;
+    border: 1px solid #fff;
     text-align: center;
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
 }
 
 .sidenav li > a > i {
@@ -145,6 +167,10 @@ nav ul a.active {
 .sidenav li > a.active > i {
     color: #fff !important;
     font-weight: bold;
+}
+
+#sidenav-opener i {
+    font-size: 40px;
 }
 
 /* Floating buttons */
@@ -320,6 +346,26 @@ h3.section-title::after {
 
 .mt-0 {
     margin-top: 0 !important;
+}
+
+.mt-1 {
+    margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
 }
 
 .mb-0 {

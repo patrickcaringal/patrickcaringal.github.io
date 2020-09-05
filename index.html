@@ -9,6 +9,7 @@
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" media="screen,projection" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@900&family=Gugi&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 
         <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
         <link rel="stylesheet" href="public/css/aos.css" />
@@ -26,37 +27,39 @@
                                 <img src="public/img/pat-logo-white.png" style="height: 64px; display: block" class="white-logo" />
                                 <img src="public/img/pat-logo.png" style="height: 64px; display: block" class="black-logo hide" />
                             </a>
-                            <ul class="right hide-on-med-and-down">
+                            <ul class="right hide-on-small-only">
                                 <li><a href="#portfolio" class="navbar-item">Portfolio</a></li>
                                 <li><a href="#about" class="navbar-item">About</a></li>
                                 <li><a href="#contact" class="navbar-item">Contact</a></li>
-                                <!-- <li><a href="#skills" class="navbar-item">Skills</a></li> -->
-                                <!-- <li><a href="#achievements" class="navbar-item">Achievements</a></li> -->
                             </ul>
-                            <a id="sidenav-opener" href="#" data-target="slide-out" class="sidenav-trigger right navbar-item"><i class="material-icons">menu</i></a>
+                            <!-- sidenav-trigger  -->
+                            <a id="sidenav-opener" href="#" data-target="slide-out" class="right navbar-item hide-on-med-and-up"><i class="material-icons">menu</i></a>
                         </div>
                     </div>
                 </nav>
             </div>
             <ul id="slide-out" class="sidenav grey darken-4">
-                <li class="pb-2">
-                    <div class="user-view center-align">
-                        <img class="circle" src="public/img/img_avatar3.png" style="margin: 0 auto; width: 7.5rem; height: auto; border: 0.375rem solid #424242" />
-                        <span class="white-text name" style="font-size: 1.5rem; font-family: 'Raleway', sans-serif; text-transform: uppercase">Patrick Caringal</span>
-                    </div>
+                <li class="pt-2 pb-4">
+                    <img src="public/img/pat-logo-white.png" class="sidenav-logo" style="margin: auto; height: 100px; display: block" class="white-logo" />
                 </li>
-                <li class="pb-4">
+                <!-- <li class="pb-4">
                     <div class="social-link center-align">
-                        <a class="waves-effect blue-grey darken-3 white-text" href="#!"><i class="fab fa-facebook-f white-text"></i></a>
-                        <a class="waves-effect blue-grey darken-3 white-text" href="#!"><i class="fab fa-instagram white-text"></i></a>
                         <a class="waves-effect blue-grey darken-3 white-text" href="#!"><i class="fab fa-linkedin-in white-text"></i></a>
                         <a class="waves-effect blue-grey darken-3 white-text" href="#!"><i class="fab fa-github white-text"></i></a>
                     </div>
+                </li> -->
+
+                <li>
+                    <a class="sidenav-close waves-effect white-text" href="#portfolio"><i class="fas fa-briefcase white-text"></i> Portfolio </a>
                 </li>
                 <li>
                     <a class="sidenav-close waves-effect white-text" href="#about"><i class="fas fa-user-tie white-text"></i> About </a>
                 </li>
                 <li>
+                    <a class="sidenav-close waves-effect white-text" href="#contact"><i class="fas fa-phone-alt white-text"></i> Contact </a>
+                </li>
+
+                <!-- <li>
                     <a class="sidenav-close waves-effect" href="#skills"><i class="fas fa-stream"></i> Skills</a>
                 </li>
                 <li>
@@ -67,7 +70,7 @@
                 </li>
                 <li>
                     <a class="sidenav-close waves-effect grey-text text-darken-1" href="#contact"><i class="fas fa-phone-alt grey-text text-darken-1"></i> Contact</a>
-                </li>
+                </li> -->
             </ul>
 
             <button id="sidenav-closer" href="#" data-target="slide-out" class="btn-floating btn-large waves-effect waves-light teal lighten-2 scale-transition scale-out"><i class="material-icons">close</i></button>
@@ -77,10 +80,13 @@
                 <div class="col s12">
                     <div id="home" class="section scrollspy">
                         <div class="container">
-                            <h2 style="margin: 0">I can be your <br /><span style="font-weight: bold">Key Player</span></h2>
-                            <div>
-                                <h4 style="letter-spacing: 10px; text-transform: uppercase">Patrick Caringal</h4>
-                                <span style="text-transform: uppercase; letter-spacing: 5px">Full Stack Software Engineer</span>
+                            <h2 class="heading">I can be your Key Player</h2>
+                            <h5 class="subheading mt-5">Patrick Caringal</h5>
+                            <span class="subheading">Full Stack Software Engineer</span>
+
+                            <div class="social-link mt-4">
+                                <a class="waves-effect white-text" href="#!"><i class="fab fa-linkedin-in white-text"></i></a>
+                                <a class="waves-effect white-text" href="#!"><i class="fab fa-github white-text"></i></a>
                             </div>
                         </div>
                     </div>
@@ -435,6 +441,11 @@
             scrollspyInit();
             skillIsotopeInit();
 
+            // ignore # href
+            document.getElementById('sidenav-opener').addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+
             // Sidenav
             function sidenavInit() {
                 const sidenavOpenerButton = document.getElementById('sidenav-opener');
@@ -448,6 +459,15 @@
                 });
 
                 sidenavCloserButton.addEventListener('click', function () {
+                    $sidenav.close();
+                });
+
+                sidenavOpenerButton.addEventListener('click', function () {
+                    $sidenav.open();
+                });
+
+                document.getElementsByClassName('sidenav-logo')[0].addEventListener('click', function () {
+                    $('html, body').stop().animate({ scrollTop: 0 }, 500, 'swing');
                     $sidenav.close();
                 });
             }
@@ -478,7 +498,7 @@
                     const blacklogo = document.getElementsByClassName('black-logo')[0];
                     const navbarItems = Array.prototype.slice.call(document.getElementsByClassName('navbar-item'));
 
-                    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
                         // expand nav
                         slideUpButton.classList.remove('scale-out');
                         navbar.classList.add('nav-expaneded');
