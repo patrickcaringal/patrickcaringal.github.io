@@ -24,7 +24,7 @@
                         <div class="container">
                             <a href="#" class="brand-logo left"> Patrick Caringal</a>
                             <ul class="right hide-on-small-only">
-                                <li><a href="#portfolio" class="navbar-item">Works</a></li>
+                                <li><a href="#portfolio" class="navbar-item">Portfolio</a></li>
                                 <li><a href="#about" class="navbar-item">Blog</a></li>
                                 <!-- <li><a href="#contact" class="navbar-item">About</a></li> -->
                             </ul>
@@ -67,20 +67,29 @@
             <button id="slide-up" type="button" class="btn-floating btn-large waves-effect waves-light teal lighten-2 scale-transition scale-out"><i class="material-icons">keyboard_arrow_up </i></button>
 
             <div class="row">
-                <div class="col s12">
+                <div class="col s12 no-padding">
                     <div id="home" class="section scrollspy">
                         <div class="container">
                             <h2 class="tagline">I can be your Key Player</h2>
                             <h3 class="headline">Hi, I'm Patrick Caringal</h3>
                             <h4 class="subheadline">I'm a Full stack Software Engineer based in Manila, PH. Building websites & applications is my passion. My expertise are <b>JavaScript</b>, <b>Node JS</b> and <b>React JS</b>.</h4>
 
-                            <button class="btn cta blue darken-4 waves-effect waves-light" type="button">See my Works</button>
+                            <!-- actions -->
+                            <button class="btn cta blue darken-4 waves-effect waves-light" type="button">See some of my Projects</button>
                             <button class="btn non-cta waves-effect waves-light" type="button">Know more about me</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col s12">
+                <div class="col s12 no-padding">
+                    <div id="portfolio" class="section scrollspy">
+                        <div class="container">
+                            <h3 class="headline">Portfolio</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 no-padding">
                     <div id="spacer" class="section scrollspy"></div>
                 </div>
             </div>
@@ -89,7 +98,20 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
         <script type="text/javascript" src="public/js/aos.js"></script>
+        <script>
+            window.onscroll = function () {
+                const navbar = document.getElementById('navbar');
 
-        <script></script>
+                if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+                    navbar.classList.add('navbar-shadow');
+                } else {
+                    navbar.classList.remove('navbar-shadow');
+                }
+            };
+
+            const $scrollspy = M.ScrollSpy.init(document.querySelectorAll('.scrollspy'), {
+                scrollOffset: screen.width <= 600 ? 25 : 50
+            });
+        </script>
     </body>
 </html>
