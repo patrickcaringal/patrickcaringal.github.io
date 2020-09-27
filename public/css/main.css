@@ -7,6 +7,23 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png');
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 #navbar {
     background: transparent;
     box-shadow: none;
@@ -34,22 +51,21 @@ body {
 }
 
 #home {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    height: calc(100vh - 64px);
+    box-sizing: border-box;
 }
 
-.tagline {
-    font-size: 4.375rem !important;
+#home .tagline {
+    font-size: 5.625rem !important;
     font-weight: 800;
     margin-bottom: 50px;
 }
-.subheadline {
-    font-size: 29px;
+#home .subheadline {
     line-height: 1.5em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-.subheadline b {
+#home .subheadline b {
     font-weight: 600;
 }
 
@@ -62,43 +78,72 @@ body {
     color: #333333;
 }
 
-#portfolio .headline {
-    margin-bottom: 50px;
-    text-align: center;
-    font-weight: 800;
+#portfolio {
+    padding-top: 80px;
 }
 
-#portfolio {
-    /* padding-top: 100px; */
-    padding-bottom: 100px;
+#portfolio .headline {
+    position: relative;
+    margin-bottom: 120px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 8px;
+    text-transform: uppercase;
 }
+
+#portfolio .headline:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    border-top: 3px solid #ccc;
+    border-radius: 50px;
+    width: 25%;
+}
+
+#portfolio .headline:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    border-top: 3px solid #ccc;
+    border-radius: 50px;
+
+    width: 25%;
+}
+/* .wrap:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-top: 1px solid black;
+    background: black;
+    width: 100%;
+    transform: translateY(-50%);
+  } */
 
 #portfolio .projects {
     display: flex;
     flex-direction: column;
-    /* background: khaki; */
-    /* border: 1px solid khaki; */
 }
 
 #portfolio .project-details {
     flex: 1;
-    /* padding-top: 30px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 #portfolio .project-title {
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-weight: 600;
+    margin-top: 0;
 }
 
 #portfolio .project {
     flex: 1;
     display: flex;
     flex-direction: row;
-    margin-bottom: 120px;
+    margin-bottom: 200px;
 }
 
 #portfolio .project p {
@@ -108,22 +153,29 @@ body {
 }
 
 #portfolio .tech-stack {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #portfolio .project-media {
     flex: 2;
-    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
 }
 
 #portfolio .project-media-left {
     flex: 2;
-    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 80px;
 }
 
 #portfolio .project-media-img {
     width: 100%;
     height: auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #spacer {

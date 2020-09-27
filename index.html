@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" media="screen,projection" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Raleway:wght@900&family=Gugi&display=swap" rel="stylesheet" /> -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 
@@ -68,27 +67,27 @@
             <button id="slide-up" type="button" class="btn-floating btn-large waves-effect waves-light teal lighten-2 scale-transition scale-out"><i class="material-icons">keyboard_arrow_up </i></button>
 
             <div class="row">
-                <!-- <div class="col s12 no-padding">
-                    <div id="home" class="section scrollspy">
+                <div class="col s12 no-padding">
+                    <div id="home" class="section scrollspy" style="display: flex; flex-direction: column; justify-content: center">
                         <div class="container">
                             <h2 class="tagline">I can be your Key Player</h2>
-                            <h3 class="headline">Hi, I'm Patrick Caringal</h3>
-                            <h4 class="subheadline">I'm a Full stack Software Engineer based in Manila, PH. Building websites & applications is my passion. My expertise are <b>JavaScript</b>, <b>Node JS</b> and <b>React JS</b>.</h4>
+                            <h3>Hi, I'm Patrick Caringal</h3>
+                            <h5 class="subheadline">I'm a Full-stack Software Engineer based in Manila, PH. Building websites and applications are my passion. My expertise are <b>JavaScript</b>, <b>Node JS</b> and <b>React JS</b>.</h5>
 
-                            <button class="btn cta blue darken-4 waves-effect waves-light" type="button">See some of my Projects</button>
+                            <a class="btn cta blue darken-4 waves-effect waves-light" href="#portfolio">See some of my Projects</a>
                             <button class="btn non-cta waves-effect waves-light" type="button">Know more about me</button>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <div class="col s12 no-padding">
                     <div id="portfolio" class="section scrollspy">
                         <div class="container">
-                            <!-- <h3 class="headline">Portfolio</h3> -->
+                            <h2 class="headline">Portfolio</h2>
                             <div class="projects">
                                 <div class="project">
                                     <div class="project-details">
-                                        <h4 class="project-title">Pat MDb</h4>
+                                        <h3 class="project-title">Pat MDb</h3>
                                         <p>A Movie database application for browsing thousands of Movies, TV shows and Actors/Actress and keeping track of favorite shows by creating your own list.</p>
 
                                         <div class="tech-stack">
@@ -111,7 +110,45 @@
                                     </div>
                                     <div class="project-details">
                                         <h4 class="project-title">Pat MDb</h4>
-                                        <p>A Movie database application for browsing thousands of Movies.</p>
+                                        <p>A Movie database application for browsing thousands of Movies, TV shows and Actors/Actress and keeping track of favorite shows by creating your own list.</p>
+
+                                        <div class="tech-stack">
+                                            <div class="chip">React JS</div>
+                                            <div class="chip">Typescript</div>
+                                            <div class="chip">Redux</div>
+                                            <div class="chip">Redux-Saga</div>
+                                            <div class="chip">Material UI</div>
+                                            <div class="chip">Heroku</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project">
+                                    <div class="project-details">
+                                        <h3 class="project-title">Pat MDb</h3>
+                                        <p>A Movie database application for browsing thousands of Movies, TV shows and Actors/Actress and keeping track of favorite shows by creating your own list.</p>
+
+                                        <div class="tech-stack">
+                                            <div class="chip">React JS</div>
+                                            <div class="chip">Typescript</div>
+                                            <div class="chip">Redux</div>
+                                            <div class="chip">Redux-Saga</div>
+                                            <div class="chip">Material UI</div>
+                                            <div class="chip">Heroku</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-media">
+                                        <img class="project-media-img" src="https://via.placeholder.com/672x474/767c77/fabea7?text=Project" />
+                                    </div>
+                                </div>
+
+                                <div class="project">
+                                    <div class="project-media-left">
+                                        <img class="project-media-img" src="https://via.placeholder.com/672x474/767c77/fabea7?text=Project" />
+                                    </div>
+                                    <div class="project-details">
+                                        <h4 class="project-title">Pat MDb</h4>
+                                        <p>A Movie database application for browsing thousands of Movies, TV shows and Actors/Actress and keeping track of favorite shows by creating your own list.</p>
 
                                         <div class="tech-stack">
                                             <div class="chip">React JS</div>
@@ -134,10 +171,18 @@
             </div>
         </main>
 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
         <script type="text/javascript" src="public/js/aos.js"></script>
         <script>
+            const $logo = document.getElementsByClassName('brand-logo')[0];
+
+            $logo.addEventListener('click', function (event) {
+                event.preventDefault();
+                $('html, body').stop().animate({ scrollTop: 0 }, 500, 'swing');
+            });
+
             window.onscroll = function () {
                 const navbar = document.getElementById('navbar');
 
