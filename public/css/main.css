@@ -4,7 +4,11 @@
 }
 
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png');
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png');
+}
+
+main {
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
