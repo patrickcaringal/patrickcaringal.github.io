@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png');
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png');
 }
 
 main {
@@ -54,6 +54,10 @@ main {
     color: #333333 !important;
 }
 
+.container {
+    width: 90% !important;
+}
+
 /* -------------------------- */
 
 #home {
@@ -99,6 +103,80 @@ main {
     color: #333333;
 }
 
+#portfolio {
+    padding-top: 40px;
+}
+
+#portfolio .headline {
+    position: relative;
+    margin-bottom: 60px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* #portfolio .headline:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-top: 3px solid #ccc;
+    border-radius: 50px;
+    width: 10%;
+}
+
+#portfolio .headline:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border-top: 3px solid #ccc;
+    border-radius: 50px;
+
+    width: 10%;
+} */
+
+#portfolio .project {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+#portfolio .project-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#portfolio .project-details .project-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#portfolio .project-details .project-description {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.75 !important;
+    font-size: 18px;
+}
+
+#portfolio .project-details .tech-stack {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#portfolio .project-media {
+    flex: 1;
+}
+
+#portfolio .project-media-img {
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
 /* landscape small devices ~ EXTRA MEDIA QUERY */
 @media only screen and (max-height: 650px) {
     #home {
@@ -109,14 +187,14 @@ main {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body {
-        /* background: yellow; */
+        background: yellow;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     body {
-        /* background: orange; */
+        background: orange;
     }
 
     #navbar .brand-logo {
@@ -168,117 +246,82 @@ main {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body {
-        /* background: green; */
+        background: green;
     }
 
     #home {
         height: calc(100vh - 64px);
         box-sizing: border-box;
     }
+
+    #portfolio {
+        padding-top: 60px;
+    }
+
+    #portfolio .headline {
+        font-size: 60px;
+        margin-bottom: 120px;
+    }
+
+    #portfolio .project {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 200px;
+    }
+
+    #portfolio .project:nth-child(odd) {
+        flex-direction: row;
+    }
+
+    #portfolio .project:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #portfolio .project-details .project-title {
+        font-size: 2.92rem;
+        margin-bottom: 1.168rem;
+    }
+
+    #portfolio .project-details .project-description {
+        font-size: 1.125rem;
+    }
+
+    #portfolio .project-details .tech-stack {
+        margin-top: 20px;
+    }
+
+    #portfolio .project-media {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #portfolio .project:nth-child(odd) .project-media {
+        padding-left: 30px;
+    }
+
+    #portfolio .project:nth-child(even) .project-media {
+        padding-right: 30px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     body {
-        /* background: LIGHTSALMON; */
+        background: LIGHTSALMON;
+    }
+
+    .container {
+        width: 70% !important;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     body {
-        /* background: lightblue; */
+        background: lightblue;
     }
-}
-
-#portfolio {
-    padding-top: 80px;
-}
-
-#portfolio .headline {
-    position: relative;
-    margin-bottom: 120px;
-    text-align: center;
-    font-weight: 800;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-}
-
-#portfolio .headline:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 25px;
-    border-top: 3px solid #ccc;
-    border-radius: 50px;
-    width: 25%;
-}
-
-#portfolio .headline:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 25px;
-    border-top: 3px solid #ccc;
-    border-radius: 50px;
-
-    width: 25%;
-}
-
-#portfolio .projects {
-    display: flex;
-    flex-direction: column;
-}
-
-#portfolio .project-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#portfolio .project-title {
-    font-weight: 600;
-    margin-top: 0;
-}
-
-#portfolio .project {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 200px;
-}
-
-#portfolio .project p {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.75 !important;
-    font-size: 1.125rem;
-}
-
-#portfolio .tech-stack {
-    margin-top: 20px;
-}
-
-#portfolio .project-media {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 80px;
-}
-
-#portfolio .project-media-left {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 80px;
-}
-
-#portfolio .project-media-img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #spacer {
@@ -294,6 +337,9 @@ main {
 }
 
 .chip {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
+    padding: 8px;
+    line-height: normal;
+    height: auto;
 }
